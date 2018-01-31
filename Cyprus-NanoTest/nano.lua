@@ -12,12 +12,12 @@ local storedIDs = {database}
 for i=1, #storedIDs do
   nano = ant.getInfectedEntity( storedIDs[i])
     if nano.isPlayer == true then
-    name = nano.getPlayerName()
+    playerName = nano.getPlayerName()
     playerUUID = nano.getUUID()
 
 --Stores the Nano ID, the player name and the player's UUID into a table.
-    infectedPlayerList = { storedIDs[i], name, playerUUID }
-    end
+    infectedPlayerList = { storedIDs[i], playerName, playerUUID }
+end
 
 
 
@@ -25,6 +25,6 @@ for i=1, #storedIDs do
 
 
 
-nano = ant.getInfectedEntity(829228)
+nano = ant.getInfectedEntity(storedIDs[i])
 
 sleep(2)
